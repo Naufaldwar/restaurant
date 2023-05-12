@@ -18,5 +18,9 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  // env: {
+  //   API_BASE_URL: process.env.API_BASE_URL || "",
+  //   NEXTAUTH_URL: process.env.NEXTAUTH_URL || "",
+  // },
 };
 export default config;
