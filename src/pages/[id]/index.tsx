@@ -41,13 +41,14 @@ export default function DetailPage() {
           "https://645e73a512e0a87ac0f0ba10.mockapi.io/api/v1/detail"
         );
         console.log("response", response.data);
+        // tslint:disable-next-line:no-unsafe-any
         setDetailData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    handleGetDate();
+    void handleGetDate();
   }, []);
   const router = useRouter();
   const id = parseInt(router.query.id as string);

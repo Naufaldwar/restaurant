@@ -42,8 +42,8 @@ export default function Home({ restaurants }: Props) {
           All Restaurant
         </Text>
         <Flex wrap="wrap" gap="md">
-          {restaurants.map((restaurant) => (
-            <Card restaurant={restaurant} />
+          {restaurants.map((restaurant, index) => (
+            <Card key={index} restaurant={restaurant} />
           ))}
         </Flex>
       </Container>
