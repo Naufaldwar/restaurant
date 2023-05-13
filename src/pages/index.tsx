@@ -8,7 +8,7 @@ type TRestaurant = {
   rating: number;
   price: number;
   opened: boolean;
-  type_restaurant: string;
+  categories: string;
 };
 
 const handleGetDate = async () => {

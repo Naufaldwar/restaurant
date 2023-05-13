@@ -10,7 +10,7 @@ type TRestaurant = {
   rating: number;
   price: number;
   opened: boolean;
-  type_restaurant: string;
+  categories: string;
 };
 
 type Props = {
@@ -59,7 +59,7 @@ export const Card = ({ restaurant }: Props) => {
               </Flex>
               <Flex justify="space-between">
                 <Text size="sm">
-                  {restaurant.type_restaurant} - {restaurant.price}
+                  {restaurant.categories} - {restaurant.price}$
                 </Text>
 
                 {restaurant.opened === true ? (
@@ -79,7 +79,13 @@ export const Card = ({ restaurant }: Props) => {
                 )}
               </Flex>
             </Flex>
-            <Button w="100%" h="100px" radius={0}>
+            <Button
+              component="a"
+              href={`/${restaurant.id}`}
+              w="100%"
+              h="100px"
+              radius={0}
+            >
               LEARN MORE
             </Button>
           </Flex>
